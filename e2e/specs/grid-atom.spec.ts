@@ -3,8 +3,8 @@ import { test, Page, expect } from "@playwright/test";
 import { NewAppOverview } from "../../src/page-objects/new-app-overview.po";
 
 
-test.describe("expandedgrid >",async ()=>   {
-let page:Page;
+test.describe("expanded grid >",async ()=>   {
+let page: Page;
 let newApp: NewAppOverview;
 
 test.beforeAll(async ({ browser }) => {
@@ -17,9 +17,8 @@ test.describe("Default State >", () => {
   });
 
   test.only("click expander for data",async () => {
-    await newApp.tennisLogo.clickIcon();
-    expect(await newApp.tennisLogo.getTennisPlayerTable());
+    expect(await newApp.treeView.getTennisPlayerTable());
+    expect(await newApp.treeView.getTennisPlayerTable());
   });
-
 });
 });

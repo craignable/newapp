@@ -3,16 +3,13 @@ import { Locator } from "@playwright/test";
 
 export class NewAppGrid extends Atom {
  
-  private get tennisPlayers(): Locator {
-    return this.element.locator(".dx-treeview-node >> nth=3");
+
+  private get content(): Locator {
+    return this.element.locator(".dx-treeview-item-without-checkbox >> nth=2");
   }
 
   private get cells(): Locator {
     return this.element.locator(".gridcell");
-  }
-
-   private get icon(): Locator {
-    return this.element.locator(".dx-icon");
   }
 
 
@@ -21,15 +18,10 @@ export class NewAppGrid extends Atom {
   }
 
   async getTennisPlayerTable(): Promise<void>{
-    return PageActions.click(this.tennisPlayers);
+    return PageActions.click(this.content);
   }
 
   async countCells(): Promise<number>{
     return PageActions.count(this.cells);
   }
-
-  async clickIcon(): Promise<void>{
-    return PageActions.click(this.icon);
-  }
-
 }
