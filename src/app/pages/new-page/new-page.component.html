@@ -6,11 +6,19 @@
   [showBorders]="false"
   keyExpr="ID"
   (onSelectionChanged)="selectedChanged($event)"
-  [columns]="['Name', 'Age', 'Titles', 'Slams']"
-  [focusedRowEnabled]="true"
-  [focusedRowIndex]="0"
-  [columnAutoWidth]="true"
-  [columnHidingEnabled]="true">
+  >
+  <dxo-selection mode="single"></dxo-selection>
+  <dxo-paging [enabled]="false"></dxo-paging>
+  <dxo-editing mode="popup">
+    <dxo-texts confirmDeleteMessage=""></dxo-texts>
+  </dxo-editing>
+
+  <dxi-column dataField="ID" [width]="80"></dxi-column>
+  <dxi-column dataField="Name" [width]="160"></dxi-column>
+  <dxi-column dataField="Age" [width]="130"></dxi-column>
+  <dxi-column dataField="Titles" [width]="130"></dxi-column>
+  <dxi-column dataField="Slams" [width]="130"></dxi-column>
+
 
   <dxo-paging [pageSize]="10"></dxo-paging>
   <dxo-pager [showPageSizeSelector]="true" [showInfo]="true"></dxo-pager>
