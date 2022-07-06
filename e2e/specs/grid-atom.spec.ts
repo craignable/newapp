@@ -16,11 +16,12 @@ test.describe("expanded grid >",async ()=>   {
       newApp = new NewAppOverview(page);
     });
 
-    test.only("click expander for data",async () => {
-      expect(await newApp.treeView.hover()); 
-      expect(await newApp.treeView.hover()); 
-      expect(await newApp.treeView.hover()); 
+    test.only("Click Search Icon",async () => {
+      // Add assertion for clicking search icon
+    });
 
+    test.only("Count Cells",async () => {
+      // Add assertion for counting cells
     });
   });
 });
