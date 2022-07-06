@@ -5,7 +5,7 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
-import { DxDataGridModule, DxSpeedDialActionModule, DxFormModule, DxButtonModule, DxPopupModule, DxChartModule } from 'devextreme-angular';
+import { DxDataGridModule, DxSpeedDialActionModule, DxSelectBoxModule, DxFormModule, DxButtonModule, DxPopupModule, DxChartModule } from 'devextreme-angular';
 import { NewPageComponent } from './pages/new-page/new-page.component';
 
 const routes: Routes = [
@@ -56,7 +56,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true }), DxDataGridModule, DxSpeedDialActionModule, DxFormModule, DxButtonModule, DxPopupModule, DxChartModule],
+  imports: [RouterModule.forRoot(routes, { useHash: true }), DxDataGridModule, DxSpeedDialActionModule, DxFormModule, DxSelectBoxModule, DxButtonModule, DxPopupModule, DxChartModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [

@@ -3,9 +3,10 @@
 <dx-data-grid
   id="gridContainer"
   [dataSource]="customers"
-  keyExpr="ID"
-  [columns]="['Name', 'Age', 'Titles', 'Slams']"
   [showBorders]="false"
+  keyExpr="ID"
+  (onSelectionChanged)="selectedChanged($event)"
+  [columns]="['Name', 'Age', 'Titles', 'Slams']"
   [focusedRowEnabled]="true"
   [focusedRowIndex]="0"
   [columnAutoWidth]="true"
@@ -40,6 +41,18 @@
   (onClick)="editRow()"
 >
 </dx-speed-dial-action>
+
+<div class="options">
+  <div class="caption">Options</div>
+  <div class="option">
+    <span>Direction: </span>
+    <dx-select-box
+      [dataSource]="['auto', 'up', 'down']"
+      value="auto"
+      (onSelectionChanged)="directionChanged($event)"
+    ></dx-select-box>
+  </div>
+</div>
 
 <br>
 <br>
