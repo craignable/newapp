@@ -16,3 +16,48 @@
   <dxo-filter-row [visible]="true"></dxo-filter-row>
 
 </dx-data-grid>
+
+<dx-speed-dial-action
+  icon="add"
+  label="Add row"
+  [index]="1"
+  (onClick)="addRow()"
+>
+</dx-speed-dial-action>
+<dx-speed-dial-action
+  icon="trash"
+  label="Delete row"
+  [index]="2"
+  [visible]="selectedRowIndex !== -1"
+  (onClick)="deleteRow()"
+>
+</dx-speed-dial-action>
+<dx-speed-dial-action
+  icon="edit"
+  label="Edit row"
+  [index]="3"
+  [visible]="selectedRowIndex !== -1"
+  (onClick)="editRow()"
+>
+</dx-speed-dial-action>
+
+<br>
+<br>
+<br>
+<br>
+
+<dx-chart
+  id="chart"
+  title="Slams"
+  [dataSource]="customers"
+>
+  <dxi-series color="#79cac4" type="bar" argumentField="Name" valueField="Slams">
+    <dxo-label [visible]="true" backgroundColor="#c18e92"></dxo-label>
+  </dxi-series>
+  <dxi-value-axis>
+    <dxo-tick [visible]="false"></dxo-tick>
+    <dxo-label [visible]="false"></dxo-label>
+  </dxi-value-axis>
+  <dxo-export [enabled]="true"></dxo-export>
+  <dxo-legend [visible]="false"></dxo-legend>
+</dx-chart>
