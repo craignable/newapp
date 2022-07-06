@@ -11,7 +11,7 @@ import { BrowserName } from "../src/enums/browser-name.enum";
 const commonProject: Project<PlaywrightTestOptions, PlaywrightWorkerOptions> = {
   use: {
     ...e2eModuleConfig.use,
-    baseURL: "http://localhost:4200/#/pages/new-page",
+    baseURL: "http://localhost:4200/#/home",
   },
 };
 

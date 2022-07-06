@@ -4,7 +4,7 @@ import { Locator } from "@playwright/test";
 export class NewAppGrid extends Atom {
  
   private get tennisPlayers(): Locator {
-    return this.element.locator(".dx-treeview-node >> nth=3");
+    return this.element.locator(".dx-icon-like");
   }
 
   private get cells(): Locator {

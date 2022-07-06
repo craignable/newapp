@@ -1,0 +1,60 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="31.064">
+<testsuite name="grid-atom.spec.ts" timestamp="1657022376519" hostname="" tests="1" failures="1" skipped="0" time="30.583" errors="0">
+<testcase name="expandedgrid &gt; Default State &gt; click expander for data" classname="[chrome] › grid-atom.spec.ts:20:3 › expandedgrid &gt; › Default State &gt; › click expander for data" time="30.583">
+<failure message="grid-atom.spec.ts:20:3 click expander for data" type="FAILURE">
+<![CDATA[  [chrome] › grid-atom.spec.ts:20:3 › expandedgrid > › Default State > › click expander for data ===
+
+    locator.click: Timeout 30000ms exceeded.
+    =========================== logs ===========================
+    waiting for selector ".dx-overlay >> .dx-icon"
+    ============================================================
+
+      15 |   test.beforeAll(async () => {
+      16 |     newApp = new NewAppOverview(page);
+    > 17 |     await newApp.image.getIcon();
+         |                        ^
+      18 |   });
+      19 |
+      20 |   test("click expander for data",async () => {
+
+        at Function.<anonymous> (/Users/sailaja.chavali/Workspace/newapp/node_modules/@n-able/src/page-actions.po.ts:479:19)
+        at /Users/sailaja.chavali/Workspace/newapp/node_modules/@n-able/atoms/page-actions.po.js:8:71
+        at __awaiter (/Users/sailaja.chavali/Workspace/newapp/node_modules/@n-able/atoms/page-actions.po.js:4:12)
+        at Function.click (/Users/sailaja.chavali/Workspace/newapp/node_modules/@n-able/atoms/page-actions.po.js:433:16)
+        at NewAppGrid.getIcon (/Users/sailaja.chavali/Workspace/newapp/src/atoms/expander-atoms.ts:32:24)
+        at /Users/sailaja.chavali/Workspace/newapp/e2e/specs/grid-atom.spec.ts:17:24
+        at FixtureRunner.resolveParametersAndRunFunction (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/fixtures.js:374:12)
+        at TestInfoImpl._runAsStep (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/testInfo.js:201:22)
+        at WorkerRunner._runBeforeAllHooksForSuite (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/workerRunner.js:546:9)
+        at /Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/workerRunner.js:366:11
+        at TestInfoImpl._runFn (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/testInfo.js:166:7)
+        at /Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/workerRunner.js:344:26
+        at TimeoutManager.runWithTimeout (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/timeoutManager.js:70:7)
+        at TestInfoImpl._runWithTimeout (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/testInfo.js:154:26)
+        at WorkerRunner._runTest (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/workerRunner.js:326:5)
+        at WorkerRunner.runTestGroup (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/workerRunner.js:195:11)
+        at process.<anonymous> (/Users/sailaja.chavali/Workspace/newapp/node_modules/@playwright/test/lib/worker.js:87:5)
+
+    attachment #1: trace (application/zip) ---------------------------------------------------------
+    reports/recordings/grid-atom-expandedgrid-Default-State-click-expander-for-data-chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace reports/recordings/grid-atom-expandedgrid-Default-State-click-expander-for-data-chrome/trace.zip
+
+    ------------------------------------------------------------------------------------------------
+
+    attachment #2: screenshot (image/png) ----------------------------------------------------------
+    reports/recordings/grid-atom-expandedgrid-Default-State-click-expander-for-data-chrome/test-failed-1.png
+    ------------------------------------------------------------------------------------------------
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../reports/recordings/grid-atom-expandedgrid-Default-State-click-expander-for-data-chrome/trace.zip]]
+
+[[ATTACHMENT|../reports/recordings/grid-atom-expandedgrid-Default-State-click-expander-for-data-chrome/test-failed-1.png]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

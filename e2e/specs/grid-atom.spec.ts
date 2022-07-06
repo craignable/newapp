@@ -16,10 +16,11 @@ test.describe("Default State >", () => {
     newApp = new NewAppOverview(page);
   });
 
-  test.only("click expander for data",async () => {
+  test.only("click Tennis expander logo ",async () => {
     await newApp.tennisLogo.clickIcon();
     expect(await newApp.tennisLogo.getTennisPlayerTable());
   });
 
 });
+
 });
