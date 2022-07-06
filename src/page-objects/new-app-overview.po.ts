@@ -1,20 +1,23 @@
-import { Atom, BasePage } from "@n-able/atoms";
-import { Page } from "@playwright/test";
+import { Atom, TreeViewAtom } from "@n-able/atoms";
+import {  Page } from "@playwright/test";
 import { NewAppGrid } from "../atoms/expander-atoms";
+import { TreeViewAtom } from "../../../../src/atoms/tree-view/tree-view-atom";
 import { NewAppDemoBase } from "./new-app-base.po";
 
 export class NewAppOverview extends NewAppDemoBase {
-  private _likeIcon!: NewAppGrid;
+  private _treeView:treeViewAtom;;
+
+  get treeView(): TreeViewAtom {
+    return Atom.initialise(
+      this._treeView,
+      () => new TreeViewAtom(this.demoContainer.locator(""))
+    );
+  }
   
-get likeIcon(): NewAppGrid {
-return Atom.initialise(
-this._likeIcon,
-() => new NewAppGrid(this.demoContainer .locator(".dx-icon-like"))
-);
-}
-constructor(page: Page) {
-super(page, `http://localhost:4200/#/pages/new-page`);
-}
+  
+   constructor(page: Page) {
+    super(page, `http://localhost:4200/#/pages/new-page`);
+  }
 }
 
 
