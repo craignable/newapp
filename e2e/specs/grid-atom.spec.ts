@@ -4,21 +4,23 @@ import { NewAppOverview } from "../../src/page-objects/new-app-overview.po";
 
 
 test.describe("expanded grid >",async ()=>   {
-let page: Page;
-let newApp: NewAppOverview;
+  let page: Page;
+  let newApp: NewAppOverview;
 
-test.beforeAll(async ({ browser }) => {
-  page = await PageActions.openNewBrowserAndTab(browser);
-});
-
-test.describe("Default State >", () => {
-  test.beforeAll(async () => {
-    newApp = new NewAppOverview(page);
+  test.beforeAll(async ({ browser }) => {
+    page = await PageActions.openNewBrowserAndTab(browser);
   });
 
-  test.only("click expander for data",async () => {
-    expect(await newApp.treeView.getTennisPlayerTable());
-    expect(await newApp.treeView.getTennisPlayerTable());
+  test.describe("Default State >", () => {
+    test.beforeAll(async () => {
+      newApp = new NewAppOverview(page);
+    });
+
+    test.only("click expander for data",async () => {
+      expect(await newApp.treeView.hover()); 
+      expect(await newApp.treeView.hover()); 
+      expect(await newApp.treeView.hover()); 
+
+    });
   });
-});
 });

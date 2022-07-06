@@ -4,8 +4,8 @@ import { Locator } from "@playwright/test";
 export class NewAppGrid extends Atom {
  
 
-  private get content(): Locator {
-    return this.element.locator(".dx-treeview-item-without-checkbox >> nth=2");
+  private get likeIcon(): Locator {
+    return this.element.locator(".dx-icon-like");
   }
 
   private get cells(): Locator {
@@ -18,7 +18,7 @@ export class NewAppGrid extends Atom {
   }
 
   async getTennisPlayerTable(): Promise<void>{
-    return PageActions.click(this.content);
+    return PageActions.click(this.likeIcon);
   }
 
   async countCells(): Promise<number>{
