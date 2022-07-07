@@ -1,10 +1,6 @@
-import { NgModule, Component, ViewChild } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import config from 'devextreme/core/config';
+import { Component, ViewChild } from '@angular/core';
 import { Customer, Service } from 'src/app/shared/services/app.service';
-import repaintFloatingActionButton from 'devextreme/ui/speed_dial_action/repaint_floating_action_button';
-import { DxDataGridModule, DxDataGridComponent, DxSpeedDialActionModule, DxSelectBoxModule } from 'devextreme-angular';
+import { DxDataGridComponent } from 'devextreme-angular';
 
 @Component({
   templateUrl: 'new-page.component.html',
@@ -53,11 +49,5 @@ export class NewPageComponent {
 
   popup_shown(e: any) {
     this.canShow = true;
-    let filter = this.grid?.instance.getCombinedFilter();
-    if (filter) {
-    filter.forEach((element: { filterValue: any; }) => {
-      console.log(element.filterValue);
-    });
-  }
   }
 }

@@ -28,9 +28,9 @@
 
 <dx-button
 stylingMode="contained"
-text="Show"
+text="Show Player Stats"
 type="default"
-[width]="120"
+[width]="180"
 (onClick)="click($event)"
 >
 </dx-button>
@@ -50,6 +50,30 @@ container=".dx-viewport"
 (onShown)="popup_shown($event)"
 >
 <div class="box" *dxTemplate="let data of 'content'">
+  <p>
+    Full Name:
+    <span
+      >{{ customers[selectedRowIndex].Name }}</span
+    >
+  </p>
+  <p>
+    Age:
+    <span
+      >{{ customers[selectedRowIndex].Age }}</span
+    >
+  </p>
+  <p>
+    Titles:
+    <span
+      >{{ customers[selectedRowIndex].Titles }}</span
+    >
+  </p>
+  <p>
+    Slams:
+    <span
+      >{{ customers[selectedRowIndex].Slams }}</span
+    >
+  </p>
 </div>
 </dx-popup>
 
