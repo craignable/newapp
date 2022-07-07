@@ -17,6 +17,8 @@ export class NewPageComponent {
   customers: Customer[];
   directions: any;
   selectedRowIndex = -1;
+  popupVisible: boolean = false;
+  canShow: boolean = false;
 
   constructor(service: Service) {
     this.customers = service.getCustomers();
@@ -39,5 +41,23 @@ export class NewPageComponent {
   
   selectedChanged(e) {
     this.selectedRowIndex = e.component.getRowIndexByKey(e.selectedRowKeys[0]);
+  }
+
+  click = (e: any) => {
+    (this.popupVisible = true), console.log("works");
+  };
+
+  popup_hiding(e: any) {
+    this.canShow = false;
+  }
+
+  popup_shown(e: any) {
+    this.canShow = true;
+    let filter = this.grid?.instance.getCombinedFilter();
+    if (filter) {
+    filter.forEach((element: { filterValue: any; }) => {
+      console.log(element.filterValue);
+    });
+  }
   }
 }

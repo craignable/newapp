@@ -26,6 +26,33 @@
 
 </dx-data-grid>
 
+<dx-button
+stylingMode="contained"
+text="Show"
+type="default"
+[width]="120"
+(onClick)="click($event)"
+>
+</dx-button>
+
+<dx-popup
+id="popup"
+[width]="300"
+[height]="280"
+[showTitle]="true"
+title="More Player Stats"
+[dragEnabled]="false"
+[hideOnOutsideClick]="true"
+[showCloseButton]="true"
+container=".dx-viewport"
+[(visible)]="popupVisible"
+(onHiding)="popup_hiding($event)"
+(onShown)="popup_shown($event)"
+>
+<div class="box" *dxTemplate="let data of 'content'">
+</div>
+</dx-popup>
+
 <dx-speed-dial-action
   icon="add"
   label="Add row"
